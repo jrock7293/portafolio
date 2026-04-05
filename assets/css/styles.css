@@ -424,7 +424,7 @@ body {
 
 /* Trayectoria con Integración de Foto Profesional */
 
-/* 1. Layout Principal (Grid de 2 columnas) */
+/* Layout Principal (Grid de 2 columnas) */
 .grid-about {
     display: grid;
     grid-template-columns: 1fr; /* Móvil por defecto */
@@ -439,7 +439,7 @@ body {
     }
 }
 
-/* 2. Contenedor y Efectos de la Foto (Glassmorphism Pro) */
+/* Contenedor y Efectos de la Foto (Glassmorphism Pro) */
 .about-photo-wrapper {
     position: relative;
     max-width: 350px; /* Tamaño máximo de la foto en PC */
@@ -470,7 +470,7 @@ body {
     z-index: 2;
 }
 
-/* 3. Contenido Técnico y Pilares (Reutilizando y Limpiando) */
+/* Contenido Técnico y Pilares (Reutilizando y Limpiando) */
 .about-content {
     display: flex;
     flex-direction: column;
