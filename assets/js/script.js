@@ -51,23 +51,18 @@ if (emailBtn) {
     emailBtn.addEventListener('click', () => {
         const email = emailBtn.getAttribute('data-email');
         
-        // Copiar al portapapeles
         navigator.clipboard.writeText(email).then(() => {
-            // Mostrar tooltip de éxito
             tooltip.classList.add('show');
             
-            // Cambiar el texto del botón temporalmente
             const originalText = document.getElementById('emailText').innerText;
             document.getElementById('emailText').innerText = "Copiado";
 
-            // Ocultar después de 2 segundos
             setTimeout(() => {
                 tooltip.classList.remove('show');
                 document.getElementById('emailText').innerText = originalText;
             }, 2000);
         }).catch(err => {
             console.error('Error al copiar: ', err);
-            // Fallback: Si falla el copiado automático, abre el gestor de correo
             window.location.href = `mailto:${email}`;
         });
     });
